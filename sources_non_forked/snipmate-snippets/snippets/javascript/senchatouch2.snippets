@@ -1,0 +1,86 @@
+# -- Wang Nan add them for Sencha Touch 2
+# application
+snippet app
+	Ext.application({
+		name: '${1:MyApp}',
+
+		models: [],
+		views: [],
+		controllers: [],
+
+		launch: function() {
+			${2}
+		}
+	});
+# define
+snippet def
+	Ext.define('${1:MyNamespace}.${2:dir}.${3:Class}', {
+		extend: '${4:BaseClass}',
+
+		config: {
+			${5}
+		}
+	});
+# define model
+snippet dm
+	Ext.define('${1:MyNamespace}.${2:model}.${3:Class}', {
+		extend: '${4:Ext.data.Model}',
+
+		config: {
+			${5}
+		}
+	});
+# define view
+snippet dv
+	Ext.define('${1:MyNamespace}.${2:view}.${3:Class}', {
+		extend: '${4:Ext.Panel}',
+
+		config: {
+			${5}
+		}
+	});
+# define controller
+snippet dc
+	Ext.define('${1:MyNamespace}.${2:controller}.${3:Class}', {
+		extend: '${4:Ext.app.Controller}',
+
+		config: {
+			${5}
+		}
+	});
+# define store
+snippet ds
+	Ext.define('${1:MyNamespace}.${2:store}.${3:Class}', {
+		extend: '${4:Ext.data.Store}',
+
+		config: {
+			${5}
+		}
+	});
+# items
+snippet it
+	items: [
+		{ ${3} }${1:,}
+	]${2:,}
+# xtype
+snippet xt
+	xtype: '${2:panel}'${1:,}
+# Msg alert
+snippet al
+	Ext.Msg.alert(${1});
+# create instance
+snippet cr
+	${1:instance} = Ext.create('${2:Namespace.dir.Class}', {${3}});
+#if undefined
+snippet iu
+	if (typeof ${1:object} == 'undefined') {
+		${2}
+	}
+# on event
+snippet on
+	${1:this}.on('${2:tap}', function(${3:arguments}) {
+		${4}
+	}});
+# call parent
+snippet cp
+	this.callParent(arguments);
